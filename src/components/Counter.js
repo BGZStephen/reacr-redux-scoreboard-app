@@ -1,7 +1,9 @@
 import React, { PropTypes } from "react";
 
 const Counter = (props) => {
- return (
+  const onChange = React.PropTypes.func.isRequired,
+  const score = React.PropTypes.number.isRequired,
+  return (
    <div className="counter" >
      <button className="counter-action decrement" onClick={() => props.onChange(-1)}>
        -
@@ -13,10 +15,5 @@ const Counter = (props) => {
    </div>
  );
 }
-
-Counter.propTypes = {
-  onChange: React.PropTypes.func.isRequired,
-  score: React.PropTypes.number.isRequired,
-};
 
 export default Counter;

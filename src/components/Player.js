@@ -2,6 +2,10 @@ import React, { PropTypes } from "react";
 import Counter from "./Counter";
 
 const Player = (props) => {
+  const name = React.PropTypes.string.isRequired;
+  const score = React.PropTypes.number.isRequired;
+  const onRemove = React.PropTypes.func.isRequired;
+  const onScoreChange = React.PropTypes.func.isRequired;
   return (
     <div className="player">
       <div className="player-name">
@@ -14,12 +18,5 @@ const Player = (props) => {
     </div>
   );
 }
-
-Player.propTypes = {
-  name: React.PropTypes.string.isRequired,
-  score: React.PropTypes.number.isRequired,
-  onRemove: React.PropTypes.func.isRequired,
-  onScoreChange: React.PropTypes.func.isRequired,
-};
 
 export default Player;
